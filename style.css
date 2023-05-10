@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    color: #FFF;
+    font: 16px/28px 'Be Vietnam Pro', Arial, Helvetica, sans-serif;
+    background-image: url("./img/back.jpg");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-attachment: fixed;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: .4s;
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.title-section {
+    margin-bottom: 120px;
+    font-size: 42px;
+    line-height: 64px;
+    letter-spacing: 0.6px;
+    text-align: center;
+    margin-top:24px;
+}
+
+#banner-section {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 40px;
+}
+.banner {
+    max-width: 475px;
+    padding-top: 105px;
+}
+.banner__header {
+    font-size: 49px;
+    line-height: 64px;
+    letter-spacing: 0.6px;
+}
+.banner__text {
+    margin: 32px 0 48px;
+    color: rgb(255 255 255 / 80%);
+    font-size: 16px;
+}
+.banner-features__text {
+    font-weight: 600;
+    line-height: 24px;
+}
+.banner-features__text:first-child {
+    margin-right: 40px;
+}
+.banner-features__text_strong {
+    margin-right: 16px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 52px;
+    vertical-align: sub;
+}
+.banner-img {
+    position: absolute;
+    width: 49%;
+    height: 100%;
+    top: 90px;
+    right: 0;
+}
+.banner-img::before {
+    position: absolute;
+    content: '';
+    right: 0;
+    width: 96%;
+    height: 100%;
+}
+  
+/* Rent */
+#rent-section {
+    padding: 90px 0;
+}
+/* Форма */
+
+.form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 30%; 
+    justify-content: center;
+    display: grid;
+    grid-gap: 20px;
+    align-items: flex-start;
+}
+
+.form-title {
+    text-align: center;
+    color:black;
+    padding: 20px;
+}
+
+.form-input {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: black;
+}
+
+.form-submit {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: gold;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-submit:hover {
+    background-color: #b8860b;
+}
+
+.middle {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+.form-timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+.timer-container {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .boxes-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(5, 5, 5);
+    margin: 10px;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .modal {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+  }
+
+  .modal-content {
+    background-color: black;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .close-button:hover,
+  .close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+#remaining-attempts-container {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+#remaining-attempts {
+    color: #f44336;
+  }
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: gold;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.box:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 123, 255, 0.1);
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.box:hover {
+  transform: scale(1.05);
+}
+
+.box:hover:before {
+  opacity: 1;
+}
+
+.box::after {
+  content: '';
+  position: absolute;
+  top: 0; /* можно изменить положение изображения */
+  left: 23px; /* можно изменить положение изображения */
+  width: 40px; /* ширина изображения */
+  height: 90px; /* высота изображения */
+  background-image: url('./img/dysonsm.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1; /* наложение поверх основного содержимого бокса */
+}
+
+.custom-modal {
+  background-color: black;
+  border-radius: 10px;
+}
+
+
+
+#winModalLabel{
+  background-color: #ffd000;
+}
+.modal-title {
+  font-weight: bold;
+}
+
+.btn-custom {
+  background-color: gold;
+  color: black;
+  border: none;
+  border-radius:6px;
+}
+.modal-body{
+  background-color:black;
+}
+.btn-custom:hover {
+  background-color: #0056b3;
+  color: black;
+  border-radius: 10px;
+}
+.form-sent-message {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 20px;
+  color: #000;
+}
+@media screen and (max-width: 768px) {
+  img{
+    margin-right: -50px;
+    position: absolute;
+    right: 33%;
+  }
+  
+  #banner-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #banner-section .banner {
+    text-align: center;
+    order: 2;
+    margin-top: 200px;
+  }
+
+  #banner-section .banner-img {
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 220px;
+    width: 100%;
+    margin: 0 auto; 
+  }
+  
+  .form-container{
+    max-width: 50%;
+  }
+  
+}
+

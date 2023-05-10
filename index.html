@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dyson</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <section id="banner-section">
+    <div class="container">
+      <div class="banner">
+        <h2 class="banner__header">ПРИЙМАЙ УЧАСТЬ В РОЗІГРАШІ DYSON - БІЛЬШЕ НІЖ ЧИСТОТА</h2>
+        <p class="banner__text">Спіймай свій момент чистоти: вигравай пилесос Dyson та зробіть прибирання вашого дому
+          комфортним та ефективним!</p>
+        <div class="banner-features">
+          <span class="banner-features__text"><strong class="banner-features__text_strong">#1</strong>Best Deal</span>
+        </div>
+      </div>
+    </div>
+    <div class="banner-img">
+      <img srcset="./img/dysonsm.png 320w,
+                           ./img/dyson.png 480w,                     
+                           ./img/dyson.png 800w" sizes="(max-width: 320px) 280px,
+                          (max-width: 480px) 440px,
+                          800px" src="./img/dyson.png" alt="Тут пилосос">
+    </div>
+  </section>
+  <section id="rent-section">
+    <div class="container">
+      <h2 class="title-section">Не втрачай можливість,заповняй просту форму та переходь до відкриття подарків</h2>
+      <div class="rent-wrap">
+      </div>
+    </div>
+    <div class="promotion">
+      <div class="bgc_y"></div>
+      <div class="container">
+        <div class="form-timer-container">
+          <div class="middle">
+            <h1>Кінець акції</h1>
+            <p id="demo" style="font-size:30px"></p>
+          </div>
+          <div class="form-container">
+              <form id="contact-form" class="form">
+              <h2 class="form-title">Заповніть форму</h2>
+              <input class="form-input" type="text" name="name" placeholder="Ім'я" required>
+              <input class="form-input" type="email" name="email" placeholder="name@example.com" required>
+              <label class="form-label" for="cleaning-question">Якому прибиранню віддаєте перевагу?</label>
+              <select class="form-input" name="cleaning-question" id="cleaning-question">
+                <option value="general">Генеральне прибирання</option>
+                <option value="regular">Регулярне прибирання</option>
+                <option value="deep">Глубоке прибирання</option>
+                <option value="other">Інше</option>
+              </select>
+              <button class="form-submit" type="submit">Відправити</button>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="rent-section">
+    <div class="container">
+      <h2 class="title-section">Відкрий свій переможний пилосос</h2>
+      <div class="rent-wrap">
+      </div>
+    </div>
+    <div class="boxes-container">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <div id="remaining-attempts-container">
+      <span id="remaining-attempts">3</span> спроби залишилось
+    </div>
+    <!-- Win Modal -->
+    <div class="modal fade" id="winModal" tabindex="-1" role="dialog" aria-labelledby="winModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content custom-modal">
+          <div class="modal-header">
+            <h5 class="modal-title" id="winModalLabel">Поздравляем!</h5>
+          </div>
+          <div class="modal-body">
+            Вы выиграли пылесос Dyson! Пожалуйста, проверьте свою электронную почту для получения дополнительной
+            информации.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-custom" data-dismiss="modal">Закрыть</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="loseModal" tabindex="-1" role="dialog" aria-labelledby="loseModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content custom-modal">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loseModalLabel">К сожалению...</h5>
+          </div>
+          <div class="modal-body">
+            Вы не выиграли. Попробуйте еще раз!
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-custom" data-dismiss="modal">Закрыть</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <script src="./js/timer.js"></script>
+
+  <script src="./js/main.js"></script>
+  <script src="./js/form.js"></script>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
